@@ -1,0 +1,637 @@
+* {
+    margin: 0;
+    /* I want a full screen webpage and no margins*/
+}
+
+body {
+    margin: 0;
+    padding-top: 120px;
+    /* same height as your fixed navwrap */
+}
+
+
+/*Pseudo classes that are present are :hover, :focus, :active, :nth-child, :nth-of-type*/
+
+
+/*navbar, navwrap, ftwrap, ftbar, navpic, sbar, and button are present in both pages*/
+header {
+    position: fixed;
+    /*Brings along the navigation bar even when scrolling down*/
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(0, 0, 100);
+    height: 120px;
+    z-index: 1000;
+    /*This is so the navigation bar stays behind all the time*/
+}
+
+main {
+    width: 990px;
+    margin: auto;
+}
+
+/*Navigation bar*/
+nav {
+    height: 10px;
+    /* This is to adjust the length*/
+    margin-left: -220px;
+}
+
+/*Editing the links from navbar*/
+nav a {
+    display: block;
+    width: 155px;
+    height: 30px;
+    padding: 10px;
+    text-decoration: none;
+    color: aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+    left: 850px;
+    bottom: 100px;
+    font-size: 120%;
+    float: left;
+    text-align: center;
+    transition: transform 0.3s ease; /*Tells how the element should be animated when hovered*/
+}
+
+nav a:hover {
+    background-color: rgb(0, 0, 80);
+    transform: scale(1.1); /*Scales up*/
+}
+
+nav a:active {
+    color: rgb(110, 183, 247); /*When remained clicked, it stays in this color*/
+}
+
+
+
+/*Editing the photo*/
+.navpic {
+    width: 100%;
+    /* I had to do this as this helps the photo take up space of the whole line*/
+    max-height: 300px;
+    object-fit: cover;
+    /*This resizes my image inside the "box" and it prevents squashing the photo*/
+    margin-bottom: 40px;
+    margin-top: -30px;
+}
+
+/*These two are for the search button but it does not work yet*/
+.sbar {
+    position: relative;
+    left: 370px;
+    bottom: 40px;
+}
+
+.bar {
+    width: 400px;
+    height: 30px;
+    border-radius: 10px;
+    outline: none;
+}
+
+/*When you click the search bar, it changes background color*/
+input:focus {
+    background-color: rgb(191, 204, 218);
+}
+
+button {
+    border-radius: 15px;
+    height: 30px;
+    background-color: rgb(152, 202, 255);
+    font-size: 110%;
+}
+
+/*When hovered it changes color*/
+button:hover {
+    background-color: rgb(109, 177, 250);
+}
+
+/*There are text that are larger than others but like smaller than the main header*/
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 200%;
+    text-align: center;
+}
+
+/*So that text in articles are blue*/
+article {
+    color: rgb(0, 0, 78);
+}
+
+/*Here is the footer*/
+footer {
+    height: 80px;
+    background-color: rgb(0, 0, 100);
+    overflow: hidden;
+    /*I had to do this so that the float would do its job properly. If I removed this, there is a margin at the bottom.*/
+    position: relative;
+}
+
+
+/*This part is are the links*/
+.ftbar {
+    position: relative;
+    /*To move the text to right*/
+    left: 1000px;
+    bottom: 50px;
+    text-decoration: none;
+    color: white;
+    /* visible on dark background */
+    padding-left: 10px;
+    font-size: 120%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    word-spacing: 10px;
+}
+
+/*I had to do this to color the link of this div. I had to make it separate because it works this way*/
+.ftbar a {
+    color: aliceblue;
+}
+
+.ftbar span {
+    display: inline-block; /*Sit beside each other but they are still block*/
+    margin-right: 25px;
+}
+
+/* float the text and the sprite next to each other */
+.ftbar span a {
+    float: left;
+    margin-right: 6px;
+    /* small gap before icon */
+}
+
+/*Image Sprites*/
+.sprite1 {
+    background: url('../images/Sprite.png') no-repeat -61.5px -110px;
+    background-size: 366.75px 135px; /*Resizes the picture*/
+    width: 20px;
+    height: 20px;
+    border-radius: 30%;
+    border: 2.5px solid rgb(152, 202, 255);
+    position: relative;
+    bottom: 0;
+    right: 30px;
+}
+
+.sprite2 {
+    background: url('../images/Sprite.png') no-repeat -33.75px -110px;
+    background-size: 366.75px 135px;
+    width: 20px;
+    height: 20px;
+    border-radius: 30%;
+    border: 2.5px solid rgb(152, 202, 255);
+    position: relative;
+    bottom: 0;
+    right: 28px;
+}
+
+.sprite3 {
+    background: url('../images/Sprite.png') no-repeat -117.5px -110px;
+    background-size: 366.75px 135px;
+    width: 20px;
+    height: 20px;
+    border-radius: 30%;
+    border: 2.5px solid rgb(152, 202, 255);
+    position: relative;
+    bottom: 0;
+    right: 30px;
+}
+
+
+
+/*Under here are for Homepage*/
+#hdr {
+    /*This stysles the header for Homepage*/
+    font-size: 220%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(8, 1, 78);
+    margin-top: 10px;
+    text-align: center;
+}
+
+table {
+    /*For the table*/
+    margin-left: auto;
+    /*These two makes my table go at the center.*/
+    margin-right: auto;
+    background-color: rgb(152, 202, 255);
+}
+
+#text {
+    /*For my texts in Homepage*/
+    margin-top: -50px;
+    font-size: 130%;
+    width: 980px;
+    margin: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+
+/*This is to style my image in this info*/
+#info img {
+    float: left;
+    margin-right: 15px;
+    border: 5px solid rgb(152, 202, 255);
+    border-radius: 5px;
+}
+
+#imgsin img {
+    transition: transform 0.2s ease-in-out; /*Tells how the element should be animated when hovered*/
+}
+
+#imgsin img:hover {
+    transform: translateY(-4px); /*Image goes up a bit*/
+}
+
+
+#iframe {
+    /*To center the YouTube video*/
+    width: 980px;
+    text-align: center;
+}
+
+/*References in homepage*/
+.inref {
+    font-size: 60%;
+}
+
+
+
+/*This is for Featured Projects page*/
+/*Gives space below main*/
+#feamain {
+    margin-bottom: 100px;
+}
+
+/*Title Header*/
+#fph1 {
+    font-size: 260%;
+    color: rgb(8, 1, 78);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+/* The style of the odd article */
+main article:nth-of-type(odd) .group {
+    border: 5px solid rgb(144, 198, 255);
+    background-color: white;
+}
+
+/* The style of the even article */
+main article:nth-of-type(even) .group {
+    border: 5px solid rgb(0, 0, 78);
+    background-color: rgb(231, 242, 255);
+}
+
+
+
+/*The img in odd articles float to left*/
+main article:nth-child(odd) .group .climg {
+    float: left;
+    margin-right: 15px;
+}
+
+/*The img in even articles float to right*/
+main article:nth-child(even) .group .climg {
+    float: right;
+    margin-left: 15px;
+}
+
+.group {
+    width: 920px;
+    margin: 0 auto 25px auto;
+    padding: 15px;
+    position: relative;
+    opacity: 70%;
+    transition: 0.4s ease;
+    border: 5px solid rgb(144, 198, 255);
+    background-color: white;
+    overflow: hidden;
+    font-family: 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/* Hover effect */
+.group:hover {
+    opacity: 100%;
+    transform: scale(1.05);
+}
+
+/* Images inside group */
+.group .climg {
+    width: 40%;
+    height: auto;
+}
+
+/*Title for each article*/
+.pinf {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    background: rgb(0, 0, 78);
+    text-align: center;
+    width: 320px;
+    padding: 6px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.parainfo {
+    margin-top: 10px;
+    line-height: 1.4;
+    overflow: hidden;
+    /* contains float properly */
+}
+
+.parainfo-details {
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+/*References*/
+#fearef {
+    position: relative;
+    top: 100px;
+}
+
+
+
+
+
+/*This is for Donations page*/
+/*Title Header*/
+#donmain {
+    margin-bottom: 1360px;
+    /*Gives space between contents and footer*/
+}
+
+#hdon {
+    font-size: 300%;
+    color: rgb(0, 0, 78);
+}
+
+#donpar {
+    font-size: 160%;
+    color: rgb(0, 0, 78);
+    width: 700px;
+    height: 220px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/*Image beside #donpar*/
+#imgdon {
+    float: right;
+    border: 5px solid rgb(152, 202, 255);
+    margin-right: -20px;
+    transition: transform 0.2s ease-in-out; /*Tells how the element should be animated when hovered*/
+}
+
+#imgdon:hover {
+    transform: translateY(-4px); /*Lifts up a bit the image*/
+}
+
+#don-article img {
+    margin-left: 30px;
+}
+
+#don-article {
+    position: relative;
+}
+
+/*Width of the #donpar*/
+.text-box {
+    width: 600px;
+}
+
+
+section {
+    position: relative;
+    /* absolute children are positioned relative to this */
+    padding-bottom: 100px;
+    /* space for footer so it won't overlap */
+}
+
+/* Personal info box */
+#artinfo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 450px;
+    background-color: rgb(232, 243, 255);
+    padding: 20px 20px 40px 20px;
+    border: 5px solid rgb(8, 1, 78);
+    height: 500px;
+    border-radius: 15px;
+}
+
+/* Payment section below artinfo */
+#Pay {
+    position: absolute;
+    top: 370px;
+    left: 30px;
+    width: 450px;
+}
+
+/* Images aside */
+#imgwrap {
+    position: absolute;
+    top: 0;
+    left: 530px;
+    /* beside artinfo */
+    width: 500px;
+}
+
+/*Images in #imgwrap*/
+#imgwrap img {
+    float: left;
+    margin: 5px;
+    width: 220px;
+    height: 150px;
+    object-fit: cover; /*To "crop" the images*/
+    border: 5px solid rgb(152, 202, 255);
+    transition: transform 0.2s ease-in-out;
+}
+
+#imgwrap img:hover {
+    transform: translateY(-4px); /*When hovered the image goes down a bit*/
+}
+
+#trdimg {
+    clear: left; /*Proceeds to next line*/
+}
+
+#Aim {
+    position: absolute;
+    top: 650px;
+}
+
+#Aim h1 {
+    font-size: 250%;
+    text-decoration: overline;
+    text-decoration-thickness: 2px;
+    position: absolute;
+    color: rgb(59, 154, 255);
+}
+
+#Aim img {
+    float: right;
+    margin-left: 600px;
+    transition: transform 0.2s ease-in-out;
+}
+
+#Aim img:hover {
+    transform: translateY(-4px); /*When hovered the image goes down a bit*/
+}
+
+#Aim p {
+    position: relative;
+    top: -200px;
+    width: 500px;
+    font-size: 140%;
+}
+
+#Impact {
+    position: absolute;
+    top: 1000px;
+}
+
+#Impact h1 {
+    font-size: 250%;
+    position: absolute;
+    font-size: 250%;
+    text-decoration: overline;
+    text-decoration-thickness: 2px;
+    color: rgb(59, 154, 255);
+}
+
+#Impact li {
+    font-size: 140%;
+    width: 500px;
+    margin-bottom: 10px;
+}
+
+#Impact ul {
+    margin-top: 80px;
+}
+
+#Impact img {
+    position: absolute;
+    left: 560px;
+    top: 30px;
+    transition: transform 0.2s ease-in-out;
+}
+
+#Impact img:hover {
+    transform: translateY(-4px); /*When hovered the image goes down a bit*/
+}
+
+#impact-content {
+    overflow: hidden;
+}
+
+/*Shorter input box*/
+.ccbar {
+    width: 300px;
+}
+
+#btnpro {
+    width: 50px;
+    border: 2px solid;
+    border-color: rgb(0, 0, 100);
+    padding: 5px 5px;
+    border-radius: 40%;
+    background-color: rgb(152, 202, 255);
+    transition: color 1s ease, background-color 1s ease, border-color 1s ease;
+    /*This is for the changing of the colors of my pretend button*/
+    position: relative;
+    left: 320px;
+    bottom: 35px;
+}
+
+/*When you hover, it changes color*/
+#btnpro:hover {
+    background-color: rgb(0, 0, 100);
+    border: 2px solid rgb(152, 202, 255);
+    color: white;
+}
+
+#Or {
+    position: relative;
+    left: 180px;
+    top: -40px;
+}
+
+#Gcash {
+    border: 2px solid rgb(0, 0, 100);
+    border-radius: 20%;
+    position: relative;
+    left: 140px;
+    top: 5px;
+}
+
+#donref {
+    position: relative;
+    top: 1340px;
+}
+
+
+
+
+
+
+
+/*This is for About Us page.*/
+/*The paragraphs*/
+#Par {
+    margin-top: -50px;
+    font-size: 130%;
+    color: rgb(0, 0, 78);
+    max-width: 980px;
+    margin: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+
+#Par img {
+    border: 5px solid rgb(152, 202, 255);
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+#Par img:hover {
+    transform: translateY(-4px); /*When hovered the image goes down a bit*/
+}
+
+#abme {
+    width: 980px;
+    position: relative;
+    left: 5px;
+}
+
+/*This is to make my picture go beside my text*/
+#abme img {
+    float: left;
+    margin-right: 15px;
+    border: 5px solid rgb(152, 202, 255);
+    border-radius: 5px;
+}
+
+#abme p {
+    font-size: 140%;
+    color: rgb(0, 0, 78);
+    font-family: 'Lucida Sans', 'Lucida Grande', sans-serif;
+    line-height: 1.4;
+    width: 980px;
+}
+
+.abref {
+    font-size: 80%;
+}
