@@ -165,7 +165,7 @@ footer {
 
 /*Image Sprites*/
 .sprite1 {
-    background: url('../images/Sprite.png') no-repeat -61.5px -110px;
+    background: url('Sprite.png') no-repeat -61.5px -110px;
     background-size: 366.75px 135px; /*Resizes the picture*/
     width: 20px;
     height: 20px;
@@ -177,7 +177,7 @@ footer {
 }
 
 .sprite2 {
-    background: url('../images/Sprite.png') no-repeat -33.75px -110px;
+    background: url('Sprite.png') no-repeat -33.75px -110px;
     background-size: 366.75px 135px;
     width: 20px;
     height: 20px;
@@ -189,7 +189,7 @@ footer {
 }
 
 .sprite3 {
-    background: url('../images/Sprite.png') no-repeat -117.5px -110px;
+    background: url('Sprite.png') no-repeat -117.5px -110px;
     background-size: 366.75px 135px;
     width: 20px;
     height: 20px;
@@ -634,4 +634,5 @@ section {
 
 .abref {
     font-size: 80%;
+
 }
